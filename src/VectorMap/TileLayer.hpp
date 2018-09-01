@@ -14,7 +14,6 @@
 
 #include "Tile.hpp"
 #include <vector>
-#include <iostream>
 
 class TileLayer 
 {
@@ -36,6 +35,6 @@ class TileLayer
     void setLayerSizeX(int sizeX);
     void setLayerSizeY(int sizeY);
     // Class-Functions
-    void initLayer(int tileSize);
+    void initLayer();
 };
 #endif

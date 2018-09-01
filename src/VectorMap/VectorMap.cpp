@@ -69,5 +69,5 @@ void VectorMap::setMapName(std::string name)
 void VectorMap::initMap()
 {
     map.resize(1);
-    map.at(1).initLayer(getTileSize());
+    map.at(1).initLayer();
 }

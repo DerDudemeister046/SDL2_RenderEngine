@@ -16,21 +16,18 @@ class Tile
 {
     private:
         int tileID;     // Identifies Tile in Vector
-        int tileSize;   // Tile is always a square
         int tileType;  // defines the Type e.g. gras, stone, water etc.
         bool tilePass;  // defines the passability of the tile
     public:
         Tile();
-        Tile(int id, int size, int type, bool pass);
+        Tile(int id, int type, bool pass);
         ~Tile();
         // GET-Methods
         int getTileID();
-        int getTileSize();
         int getTileType();
         bool getTilePass();
         // SET-Methods
         void setTileID(int id);
-        void setTileSize(int size);
         void setTileType(int type);
         void setTilePass(bool pass);
 };

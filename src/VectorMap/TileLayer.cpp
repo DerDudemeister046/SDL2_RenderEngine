@@ -52,23 +52,20 @@ void TileLayer::setLayerSizeY(int sizeY)
 }
 
 // Class-Functions
-void TileLayer::initLayer(int tileSize)
+void TileLayer::initLayer()
 {
     int counter = 0; // Counts tiles, sets IDs to Tiles
     int vectorSize = getLayerSizeX() * getLayerSizeY(); // get length of Vector to have place for all elements
     layer.resize(vectorSize);
-    std::cout << "SIZE: " << vectorSize << std::endl;
 
     for (int i=0; i<getLayerSizeX(); i++)
     {
         for (int j=0; j<getLayerSizeY(); j++)
         {
             layer.at(counter).setTileID(counter);
-            layer.at(counter).setTileSize(tileSize);
             layer.at(counter).setTileType(0);
             layer.at(counter).setTilePass(true);
             counter++;
-            std::cout << "TILE: " << counter << " has been created." << std::endl;
         }
     }
 
