@@ -40,6 +40,7 @@ class VectorMap
     void setMapName(std::string name);
     // Class-Functions
     void initMap();
+    std::vector<TileLayer>& returnMap();
 };
 
 #endif
