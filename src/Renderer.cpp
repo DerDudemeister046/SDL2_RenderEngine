@@ -37,9 +37,23 @@ void Renderer::initWindow()
     SDL_SetRenderDrawColor(grendr, 0xFF, 0xFF, 0xFF, 0xFF);
 }
 
-void Renderer::updateWindow()
+bool Renderer::updateWindow()
 {
-    SDL_UpdateWindowSurface(window);
+    bool quit = false;
+    while(!quit)
+    {
+        while(SDL_PollEvent(&e) != 0)
+        {
+            if(e.type == SDL_QUIT)
+            {
+                quit = true;
+            }
+        }
+    }
+    SDL_SetRenderDrawColor(grendr, 0x00, 0xFF, 0x00, 0xFF);
+    SDL_RenderClear(grendr);
+    SDL_RenderPresent(grendr);    
+    return quit;
 }
 
 void Renderer::closeWindow()
