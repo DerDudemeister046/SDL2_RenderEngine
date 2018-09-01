@@ -9,6 +9,7 @@ class Renderer
     int scrW = 1024;
     int scrH = 786;
     SDL_Window* window = NULL;
+    SDL_Renderer* grendr = NULL;
     SDL_Surface* screenSurface = NULL;
     public:
     Renderer();
@@ -21,6 +22,8 @@ class Renderer
     void setScreenHeight(int scrH);
     // Class-Functions
     void initWindow();
+    void updateWindow();
+    void closeWindow();
 };
 
 #endif // __RENDERER_HPP__

@@ -8,6 +8,7 @@
 
 int main(int argc, char* args[])
 {
+    bool running = true;
     std::cout << "SDL2 Render Engine!" << std::endl;
 
     VectorMap vm = VectorMap(10,15,32,"Hallo");
@@ -18,6 +19,13 @@ int main(int argc, char* args[])
     
     Renderer rndr = Renderer();
     rndr.initWindow();
-        
+
+    while (running)
+    {
+        rndr.updateWindow();
+    }
+    
+    rndr.closeWindow();
+
     return 0;
 }

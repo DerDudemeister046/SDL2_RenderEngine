@@ -33,8 +33,20 @@ void Renderer::initWindow()
 {
     SDL_Init(SDL_INIT_VIDEO);
     window = SDL_CreateWindow("SDL_Test", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, getScreenWidth(), getScreenHeight(), SDL_WINDOW_SHOWN);
-    screenSurface = SDL_GetWindowSurface(window);
-    SDL_FillRect(screenSurface, NULL, SDL_MapRGB(screenSurface->format, 0xFF, 0xFF, 0xFF));
+    grendr = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
+    SDL_SetRenderDrawColor(grendr, 0xFF, 0xFF, 0xFF, 0xFF);
+}
+
+void Renderer::updateWindow()
+{
     SDL_UpdateWindowSurface(window);
-    SDL_Delay(2000);
+}
+
+void Renderer::closeWindow()
+{
+    SDL_DestroyRenderer(grendr);
+    SDL_DestroyWindow(window);
+    window = NULL;
+    grendr = NULL;
+    SDL_Quit();
 }
