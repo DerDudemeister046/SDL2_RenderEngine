@@ -19,8 +19,8 @@
 class VectorMap 
 {
     private:
-    int mapSizeX;   // defines width of map
-    int mapSizeY;   // defines height of map
+    int mapSizeX;   // defines width of map in tiles
+    int mapSizeY;   // defines height of map in tiles
     int tileSize;   // defines sizes of tiles in map
     std::string mapName;
     std::vector<TileLayer> map;

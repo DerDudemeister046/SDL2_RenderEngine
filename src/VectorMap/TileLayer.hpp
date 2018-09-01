@@ -2,9 +2,12 @@
     Author:     Andi Amzoll
     Date:       01.09.2018
     Last_Edit:  01.09.2018
-    Version:    0.1a
+    Version:    0.2a
 
     Description:
+
+    Version: 0.2a
+    deleted attributes layerSizeX and layerSizeY, are defined in Vectormap anyway.
 
     Version: 0.1a
     This class creates a layer in X- and Y-Direction and stores information in a vector.
@@ -19,22 +22,16 @@ class TileLayer
 {
     private:
     int layerID;                    // defines the ID of the layer
-    int layerSizeX;                 // defines width of the layer
-    int layerSizeY;                 // defines height of the layer
     std::vector<Tile> layer;        // A vector of tiles, defining the Layer.
     public:
     TileLayer();
-    TileLayer(int id, int sizeX, int sizeY); 
+    TileLayer(int id); 
     ~TileLayer();
     // GET-Methoden
     int getLayerID();
-    int getLayerSizeX();
-    int getLayerSizeY();
     // SET-Methoden
     void setLayerID(int id);
-    void setLayerSizeX(int sizeX);
-    void setLayerSizeY(int sizeY);
     // Class-Functions
-    void initLayer();
+    void initLayer(int sizeX, int sizeY);
 };
 #endif
