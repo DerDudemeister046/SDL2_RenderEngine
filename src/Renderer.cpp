@@ -18,6 +18,11 @@ int Renderer::getScreenHeight()
 {
     return scrH;
 }
+
+SDL_Renderer* Renderer::getRenderer()
+{
+    return grendr;
+}
 // SET-Methods
 void Renderer::setScreenWidth(int scrW)
 {

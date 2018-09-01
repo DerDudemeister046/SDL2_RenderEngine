@@ -3,7 +3,7 @@ CFLAGS=-w
 LFLAGS=-lSDL2 -lSDL2_image -lSDL2_ttf -lSDL2_mixer
 PROJECTNAME=SDL2_RenderEngine
 MAILFILE=sdl2_renderEngine_main.cpp
-OBJFILES=sdl2_renderEngine_main.o Tile.o TileLayer.o VectorMap.o Renderer.o
+OBJFILES=sdl2_renderEngine_main.o Tile.o TileLayer.o VectorMap.o Renderer.o MapWindow.o
 
 all: $(OBJFILES)
 	# Compile Program
@@ -25,7 +25,10 @@ renderer.o: Renderer.cpp
 	# build Renderer.o
 	$(CC) -c Renderer.cpp
 
-sdl2_renderEngine_main.o: tile.o tileLayer.o vectorMap.o renderer.o
+mapWindow.o: Renderer.o MapWindow.cpp
+	$(CC) -c Renderer.cpp MapWindow.cpp
+
+sdl2_renderEngine_main.o: tile.o tileLayer.o vectorMap.o mapWindow.o
 	# build MainFile
 	$(CC) -c $(MAILFILE)
 

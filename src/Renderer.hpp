@@ -17,6 +17,7 @@ class Renderer
     // GET-Methods
     int getScreenWidth();
     int getScreenHeight();
+    SDL_Renderer* getRenderer();
     // SET-Methods
     void setScreenWidth(int scrW);
     void setScreenHeight(int scrH);
