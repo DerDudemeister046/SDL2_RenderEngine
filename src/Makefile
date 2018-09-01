@@ -1,13 +1,13 @@
 CC=g++
-#CFLAGS=
-#LFLAGS=
+CFLAGS=-w
+LFLAGS=-lSDL2 -lSDL2_image -lSDL2_ttf -lSDL2_mixer
 PROJECTNAME=SDL2_RenderEngine
 MAILFILE=sdl2_renderEngine_main.cpp
 OBJFILES=sdl2_renderEngine_main.o Tile.o TileLayer.o VectorMap.o Renderer.o
 
 all: $(OBJFILES)
 	# Compile Program
-	$(CC) -w $(OBJFILES) -o $(PROJECTNAME)
+	$(CC) $(OBJFILES) $(CFLAGS) $(LFLAGS) -o $(PROJECTNAME)
 
 tile.o: Tile.cpp Tile.hpp
 	# build Tile.o
