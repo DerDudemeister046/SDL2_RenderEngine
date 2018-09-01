@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
-#include "./VectorMap/VectorMap.hpp"
-#include "./VectorMap/TileLayer.hpp"
+#include "VectorMap.hpp"
+#include "TileLayer.hpp"
 
 int main()
 {
