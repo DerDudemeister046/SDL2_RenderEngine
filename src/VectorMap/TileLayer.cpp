@@ -20,7 +20,6 @@ TileLayer::~TileLayer()
 }
 
 // GET-Methods
-
 int TileLayer::getLayerID()
 {
     return layerID;
@@ -37,7 +36,6 @@ int TileLayer::getLayerSizeY()
 }
 
 // SET-Methods
-
 void TileLayer::setLayerID(int id)
 {
     layerID = id;
@@ -54,7 +52,6 @@ void TileLayer::setLayerSizeY(int sizeY)
 }
 
 // Class-Functions
-
 void TileLayer::initLayer(int tileSize)
 {
     int counter = 0; // Counts tiles, sets IDs to Tiles
