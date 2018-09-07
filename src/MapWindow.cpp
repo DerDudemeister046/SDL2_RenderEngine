@@ -7,6 +7,11 @@ MapWindow::MapWindow()
     initWindow();
 }
 
+MapWindow::MapWindow(SDL_Texture* tileset, VectorMap map)
+{
+    
+}
+
 MapWindow::~MapWindow()
 {}
 

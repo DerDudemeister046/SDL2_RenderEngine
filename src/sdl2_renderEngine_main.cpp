@@ -14,7 +14,7 @@ int main(int argc, char* args[])
 
     while(!quit)
     {
-        mw.updateWindow();
+       quit = mw.updateWindow();
     }   
 
     std::cout << "Exit now." << std::endl;

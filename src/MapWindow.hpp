@@ -13,6 +13,7 @@ class MapWindow : public Renderer
         SDL_Event e;
     public:
         MapWindow();
+        MapWindow(SDL_Texture* tileset, VectorMap map);
         ~MapWindow();
         // Class-Methods
         SDL_Texture* loadImage(std::string path);
