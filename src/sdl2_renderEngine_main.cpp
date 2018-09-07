@@ -1,15 +1,22 @@
 #include <iostream>
 #include <vector>
-#include "./VectorMap/VectorMap.hpp"
-#include "./VectorMap/TileLayer.hpp"
+#include "VectorMap.hpp"
+#include "TileLayer.hpp"
+#include "MapWindow.hpp"
 
-int main()
+
+int main(int argc, char* args[])
 {
-    std::cout << "SDL2 Render Engine!" << std::endl;
+   
+    MapWindow mw = MapWindow();
 
-    VectorMap vm = VectorMap(10,15,32,"Hallo");
-    std::cout << "MAP_NAME:\t" << vm.getMapName() << std::endl;    
-    std::vector<TileLayer> tlv = vm.returnMap();
+    bool quit = false;
 
+    while(!quit)
+    {
+       quit = mw.updateWindow();
+    }   
+
+    std::cout << "Exit now." << std::endl;
     return 0;
 }
